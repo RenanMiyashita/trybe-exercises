@@ -1,0 +1,32 @@
+div:hover {
+    border-color: greenyellow;
+    border-style: solid;
+    font-family: monospace;    
+}
+div:nth-last-of-type(5) {
+    border-color: blue;
+    color: blue;
+    font-style: italic;
+    
+}
+div:nth-last-of-type(4) {
+    color: red;
+    border-color: red;
+}
+div:nth-last-of-type(3) {
+    color: green;
+    border-color: green;
+    font-size: larger;
+    font-style: italic;
+}
+div:nth-last-of-type(2) {
+    color: brown;
+    border-color: brown;
+}
+div:nth-last-of-type(1) {
+    color: grey;
+    border-color: grey;
+    font-style: italic;
+}
+
+
