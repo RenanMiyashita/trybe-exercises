@@ -1,4 +1,4 @@
-//exercicios pt 1 - objetos e funções
+                //exercicios pt 1 - objetos e funções
 
 let info = {
     personagem: 'Margarida',
@@ -43,7 +43,35 @@ console.log (info())
   console.log ('Bem-vinda, ' + info.personagem);
 
 
+                //exercicios pt 2 - funções
+
+function verificaPalindrome (string) {
+    let arrayLetras = string.split('');
+    let isPalindrome = true;
+
+    for (let index in arrayLetras) {
+        if (arrayLetras[index] != string[(string.length -1) - index]) {
+            isPalindrome = false;
+        };
+    };
+    return isPalindrome;
+}
+verificaPalindrome('arara');
+
+console.log(verificaPalindrome('arara'));
 
 
 
-//exercicios pt 2 - funções
+function verificaPalindrome(string) {
+    let reverse = string.split('').reverse().join('');
+    if (reverse === string) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  verificaPalindrome('arara');
+
+
+console.log(verificaPalindrome('arara'));
+
