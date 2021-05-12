@@ -1,15 +1,16 @@
-/* function createAllStatesOptions (allStates) {
-
-let estados = document.querySelector('#est-usuario');
-
-    for (let index = 0; index <allStates.length; index += 1) {
-        if (allStates[index] != allStates) {
-        estados.createElement('option')
-        }
+/* function createStateOptions() {
+    let states = document.getElementById('state');
+    let stateOptions = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
+  
+    for (let index = 0; index < stateOptions.length; index += 1) {
+      let createOptions = document.createElement('option');
+      states.appendChild(createOptions).innerText = stateOptions[index];
+      states.appendChild(createOptions).value = stateOptions[index];
     }
-}
-createAllStatesOptions([Acre - AC, Alagoas - AL, Amapá - AP, Amazonas - AM, Bahia - BA, Ceará - CE, Distrito Federal - DF, Espírito Santo - ES, Goiás - GO, Maranhão - MA, Mato Grosso - MT, Mato Grosso do Sul - MS, Minas Gerais - MG, Pará - PA, Paraíba - PB, Paraná - PR, Pernambuco - PE, Piauí - PI, Rio de Janeiro - RJ, Rio Grande do Norte - RN, Rio Grande do Sul - RS, Rondônia - RO, Roraima - RR, Santa Catarina - SC, São Paulo - SP, Sergipe - SE, Tocantins - TO]) */
+  }    --------> gabarito exercicio */ 
 
+
+let stateSelect = document.querySelector('#estado-usuario');
 let brStates = [
     { name: 'Acre', abbreviation: 'AC'},
     { name: 'Alagoas', abbreviation: 'AL'},
@@ -40,7 +41,7 @@ let brStates = [
     { name: 'Tocantins', abbreviation: 'TO'}
 ];
 
-let stateSelect = document.querySelector('#estado-usuario');
+
 
 for(let index = 0; index < brStates.length; index+= 1) {
     let option = document.createElement("option");
@@ -48,3 +49,45 @@ for(let index = 0; index < brStates.length; index+= 1) {
     option.value = brStates[index].abbreviation;
     stateSelect.add(option);
 };
+
+
+function dateValidation(input, name){
+    if(input.value.length === 0){
+      return {
+        message: 'A data não foi preenchida!'
+      }
+    }
+  
+    let regex = /^\d\d\/\d\d\/\d\d\d\d$/;
+    
+    if(!regex.test(input.value)){
+      return {
+        message: 'Data: Formato inválido'
+      };
+    }
+  
+    let splitted = input.value.split('/');
+    let day = splitted[0];
+    let month = splitted[1];
+    let year = splitted[2];
+  
+    if(day < 0 || day > 30){
+      return {
+        message: 'Dia inválido'
+      };
+    }
+  
+    if(month < 0 || month > 12){
+      return {
+        message: 'Mês inválido'
+      }
+    }
+  
+    if(year < 0) {
+      return {
+        message: 'Ano inválido'
+      };
+    }
+  
+    return true;
+  }

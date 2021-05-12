@@ -1,0 +1,8 @@
+/* * {
+    margin: 16px auto 0 auto;
+    max-width: 80%;
+} */
+
+textarea {
+    resize: none;
+}
