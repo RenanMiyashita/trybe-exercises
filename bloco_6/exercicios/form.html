@@ -43,27 +43,26 @@
             <br>
 
             Tipo:
-            <label for="tipoCasa-usuario"> Casa
+            
                 <input type="radio" name="type" id="tipoCasa-usuario" required> 
-            </label>
+            <label for="tipoCasa-usuario"> Casa</label>
 
-            <label for="tipoApto-usuario"> Apartamento
                 <input type="radio" name="type" id="tipoApto-usuario" required> 
-            </label>
+            <label for="tipoApto-usuario"> Apartamento</label>
             <br>
         </fieldset>
         <br>
 
         <p>Dados sobre o último emprego:</p>
         <fieldset>
-            <label for="curriculo-usuario">Resumo do currículo:
+            <label for="curriculo-usuario">Resumo do currículo:</label>
                 <textarea name="resumo" id="curriculo-usuario" cols="30" rows="10" maxlength="1000" placeholder="Máximo de 1000 caracteres" required></textarea>
-            </label>
+            
             <br>
 
-            <label for="cargo-usuario">Cargo:
+            <label for="cargo-usuario">Cargo:</label>
                 <input type="text" name="cargo" id="cargo-usuario" maxlength="40" required>
-            </label>
+            
             <br>
 
             <label for="descricao-cargo-usuario">Descrição do cargo:
@@ -71,11 +70,16 @@
             </label>
             <br>
 
-            <label for="startDate-usuario">Data de início:
-                <input type="text" name="data-de-inicio" id="startDate-usuario" placeholder="dd/mm/aaaa" required>
-            </label>
-        </fieldset>
 
+            <div class="start-date-usuario">
+                <label for="startDate">Data de início: </label>
+                <input type="text" class="input-data" name="data-de-inicio" id="start-date-usuario" value="" placeholder="dd/mm/aaaa" required>
+            </div>
+            <!-- <label for="start-date-usuario">Data de início:
+                <input type="text" name="data-de-inicio" id="start-date-usuario" placeholder="dd/mm/aaaa" required>
+            </label> -->
+        </fieldset>
+        <button type="submit">Enviar</button>
     </form>
 
 
