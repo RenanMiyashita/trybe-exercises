@@ -50,8 +50,10 @@
       stateSelect.add(option);
   };
   
+  let picker = new Pikaday({ field: $('#datepicker')[0] });
+
   
-  function dateValidation(input, name){
+  /* function dateValidation(input, name){
       if(input.value.length === 0){
         return {
           message: 'A data não foi preenchida!'
@@ -91,4 +93,4 @@
     
       return true;
     }
-  
+   */
