@@ -11,76 +11,73 @@
 <body>
     <h1 class="display-1">Cadastro</h1>
     <p class="lead">Dados pessoais:</p>
-    <form class="form-label" action="" method="get">
-        <fieldset>
-            <label for="name-usuario">Nome:
-                <input type="text" name="nome" id="name-usuario" maxlength="40" placeholder="insira seu nome aqui" required> 
+    <form class="form-label mx-auto" action="" method="get">
+            <label class="form-label" for="name-usuario">Nome:
+                <input class="form-control" type="text" name="nome" id="name-usuario" maxlength="40" placeholder="insira seu nome aqui" required> 
             </label>
             <br>
 
-            <label for="email-usuario">E-mail:
-                <input type="email" name="email" id="email-usuario" maxlength="50" placeholder="insira seu e-mail aqui" required> 
+            <label class="form-label" for="email-usuario">E-mail:
+                <input class="form-control" type="email" name="email" id="email-usuario" maxlength="50" placeholder="insira seu e-mail aqui" required> 
             </label>
             <br>
 
-            <label for="cpf-usuario">CPF:
-                <input type="text" name="cpf" id="cpf-usuario" maxlength="11" placeholder="apenas números" required> 
+            <label class="form-label" for="cpf-usuario">CPF:
+                <input class="form-control" type="text" name="cpf" id="cpf-usuario" maxlength="11" placeholder="apenas números" required> 
             </label>
             <br>
 
-            <label for="end-usuario">Endereço:
-                <input type="text" name="endereco" id="end-usuario" maxlength="200" placeholder="rua, número e complemento" required> 
+            <label class="form-label" for="end-usuario">Endereço:
+                <input class="form-control" type="text" name="endereco" id="end-usuario" maxlength="200" placeholder="rua, número e complemento" required> 
             </label>
             <br>
 
-            <label for="city-usuario">Cidade:
-                <input type="text" name="cidade" id="city-usuario" maxlength="28" placeholder="insira o nome da cidade aqui" required> 
+            <label class="form-label" for="city-usuario">Cidade:
+                <input class="form-control" type="text" name="cidade" id="city-usuario" maxlength="28" placeholder="insira o nome da cidade aqui" required> 
             </label>
             <br>
 
-            <label for="estado-usuario">Estado:
-                <select id="estado-usuario" required></select> 
+            <label class="form-label" for="estado-usuario">Estado:
+                <select id="estado-usuario" class="form-select form-select-sm" required></select> 
             </label>
             <br>
 
             Tipo:
             
-                <input type="radio" name="type" id="tipoCasa-usuario" required> 
-            <label for="tipoCasa-usuario"> Casa</label>
+                <input type="radio" name="type" id="tipoCasa-usuario" class="form-check-input" checked required> 
+            <label for="tipoCasa-usuario" class="form-check-label"> Casa</label>
 
-                <input type="radio" name="type" id="tipoApto-usuario" required> 
-            <label for="tipoApto-usuario"> Apartamento</label>
+                <input type="radio" name="type" id="tipoApto-usuario" class="form-check-input"required> 
+            <label for="tipoApto-usuario" class="form-check-label"> Apartamento</label>
             <br>
-        </fieldset>
         <br>
 
         <p>Dados sobre o último emprego:</p>
-        <fieldset>
-            <label for="curriculo-usuario">Resumo do currículo:</label>
-                <textarea name="resumo" id="curriculo-usuario" cols="30" rows="10" maxlength="1000" placeholder="Máximo de 1000 caracteres" required></textarea>
+        <div class="form-floating">    
+            <textarea class="form-control" name="resumo" id="curriculo-usuario" cols="30" rows="10" maxlength="1000" placeholder="Máximo de 1000 caracteres" required></textarea>
+            <label id="resumo-curriculo" for="curriculo-usuario">Resumo do currículo:</label>
+        </div>
+            <br>
+
+            <label class="form-label" for="cargo-usuario">Cargo:</label>
+                <input class="form-control" type="text" name="cargo" id="cargo-usuario" maxlength="40" required>
             
             <br>
 
-            <label for="cargo-usuario">Cargo:</label>
-                <input type="text" name="cargo" id="cargo-usuario" maxlength="40" required>
-            
-            <br>
-
-            <label for="descricao-cargo-usuario">Descrição do cargo:
-                <input type="text" name="descricao-cargo" id="descricao-cargo-usuario" maxlength="500" required>
+            <label class="form-label" for="descricao-cargo-usuario">Descrição do cargo:
+                <input class="form-control" type="text" name="descricao-cargo" id="descricao-cargo-usuario" maxlength="500" required>
             </label>
             <br>
 
 
             <div class="start-date-usuario">
-                <label for="startDate">Data de início: </label>
-                <input type="text" class="input-data" name="data-de-inicio" id="start-date-usuario" value="" placeholder="dd/mm/aaaa" required>
+                <label class="form-label" for="startDate">Data de início: </label>
+                <input class="form-control" type="text" class="input-data" name="data-de-inicio" id="start-date-usuario" value="" placeholder="dd/mm/aaaa" required>
             </div>
             <!-- <label for="start-date-usuario">Data de início:
                 <input type="text" name="data-de-inicio" id="start-date-usuario" placeholder="dd/mm/aaaa" required>
             </label> -->
-        </fieldset>
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-outline-success">Enviar</button>
     </form>
 
 
