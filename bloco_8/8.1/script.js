@@ -6,3 +6,5 @@ const newEmployees = () => {
     }
     return employees;
   };
+
+  const nameAndEmail = () => {};
