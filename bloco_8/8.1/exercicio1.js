@@ -4,6 +4,7 @@ const newEmployees = (employeeGenerator) => {
       id2: employeeGenerator ('Luiza Drumond'), // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
       id3: employeeGenerator ('Carla Paiva'), // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
       id4: employeeGenerator ('Gabriele Pereira de Souza'),
+      id5: employeeGenerator ('Renan Miyashita'),
     }
     return employees;
   };
