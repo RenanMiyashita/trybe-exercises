@@ -6,7 +6,7 @@ const loteryResult = (myNumber, callback) => {
 
   return numberChecker(myNumber, number) ? 'lucky day, you are rich!!!' : 'Sorry, try again next time!';
 };
-console.log(loteryResult(2, numberChecker));
+console.log(loteryResult(3, numberChecker));
 
 // const loteryResult = (myNumber, callback) => {
 //   const number = Math.round(Math.random() * 4 + 1);
