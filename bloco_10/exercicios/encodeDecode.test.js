@@ -20,7 +20,7 @@ describe('Testa as funções encode e decode', () => {
   });
 
   test ('encode converte apenas a vogal "i" no número "3"', () => {
-    expect (encode('xixi')).toStrictEqual('x3x3');
+    expect (encode('xicara')).toStrictEqual('x3c1r1');
   });
 
   test ('encode converte apenas a vogal "o" no número "4"', () => {

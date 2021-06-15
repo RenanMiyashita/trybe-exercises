@@ -1,4 +1,4 @@
-function mapString (objectMap, string) {
+const mapString = (objectMap, string) => {
   const splitString = string.split('');
   const mappedArray = splitString.map((character) => {
     if (objectMap[character]) {
@@ -9,7 +9,7 @@ function mapString (objectMap, string) {
   return mappedArray.join('');
 }
 
-function encode(string) {
+const encode = (string) => {
   const map = {
     a: 1,
     e: 2,
@@ -32,5 +32,7 @@ function decode(string) {
 }
 
 const functions = { encode, decode };
+
+console.log(encode('xicara'));
 
 module.exports = functions;
